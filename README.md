@@ -1,4 +1,4 @@
-# football-scores
+# Soccer-Scores
 
 ## Project setup
 ```
