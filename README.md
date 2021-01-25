@@ -1,29 +1,34 @@
 # Soccer-Scores
 
-## Project setup
-```
-npm install
-```
+- [General info](#General-info)
+- [Status](#Status)
+- [Screenshots](#Screenshots)
+- [Inspiration](#Inspiration)
+- [Technologies](#Technologies)
+- [Setup](#Setup)
+- [Features](#Features)
+- [Contact](#Contact)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## General info
 
-### Run your unit tests
-```
-npm run test:unit
-```
+## Status
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Screenshots
+
+## Inspiration
+
+## Technologies
+
+## Setup
+
+## Features
+
+## Contact
+
+
+
 
 ### Customize configuration
+
 See [Configuration Reference](https://cli.vuejs.org/config/).
