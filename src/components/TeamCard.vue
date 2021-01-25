@@ -1,9 +1,9 @@
 <template>
-  <div class="home-view"></div>
+  <div class="team-card"></div>
 </template>
 
 <script>
 export default {
-  name: "Home"
+  name: "TeamCard"
 };
 </script>

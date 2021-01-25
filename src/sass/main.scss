@@ -1,0 +1,29 @@
+// ABSTRACTS
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// BASE
+@import 'base/animations';
+@import 'base/typography';
+@import 'base/typography';
+
+// COMPONENTS
+@import 'components/match-card';
+@import 'components/match-details-card';
+@import 'components/team-card';
+@import 'components/team-details-card';
+
+// LAYOUT
+@import 'layout/app-container';
+@import 'layout/navigation';
+@import 'layout/footer';
+
+// PAGES
+@import 'pages/home';
+@import 'pages/match-details';
+
+// THEMES
+@import 'themes/theme';
+
+// VENDORS
+@import 'vendors/font-awesome';

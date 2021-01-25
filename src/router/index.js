@@ -4,6 +4,10 @@ import Home from "../views/Home.vue";
 
 Vue.use(VueRouter);
 
+function lazyLoad(view) {
+  return () => import(`@/views/${view}.vue`);
+}
+
 const routes = [
   {
     path: "/",
@@ -11,13 +15,21 @@ const routes = [
     component: Home
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+    path: "/:id",
+    name: "MatchDetails",
+    component: lazyLoad("MatchDetails"),
+    props: true
+  },
+  {
+    path: "/teams",
+    name: "Teams",
+    component: lazyLoad("Teams")
+  },
+  {
+    path: "/teams/:id",
+    name: "TeamDetails",
+    component: lazyLoad("TeamDetails"),
+    props: true
   }
 ];
 
