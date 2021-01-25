@@ -30,17 +30,24 @@ to be uploaded on completion
 This app is inspired by lovescore.com. 
 
 ## Technologies
-
-- Vue
-
-
-## Setup
+- Vue 2
+- Vue CLI- Vue Router, Vuex, Babel, Eslint + Prettier
+- Sass - BEM model, 7 in 1 architectur 
+- Axios
+- Lodash
+- MomentJS
 
 ## Features
+#### done
 
-## Contact
+#### todo
 
-
+## Setup
+- npm install axios
+- npm install lodash
+- npm install momment
+- npm install node-sass@4.14.1
+- npm install sass-loader
 
 
 ### Customize configuration
