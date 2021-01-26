@@ -12,10 +12,10 @@ export const matchPlayApi = axios.create({
 });
 
 export default {
-  getDutch1() {
+  getDutchOne() {
     return matchPlayApi.get(`/seasons?apikey=${API_KEY}&league_id=449`);
   },
-  getDutch2() {
+  getDutchTwo() {
     return matchPlayApi.get(`/seasons?apikey=${API_KEY}&league_id=450`);
   }
 };

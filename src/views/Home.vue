@@ -19,7 +19,23 @@
 </template>
 
 <script>
+import { mapActions, mapState, mapGetters } from "vuex";
+
 export default {
-  name: "Home"
+  name: "Home",
+  data() {
+    return {
+      id: ""
+    };
+  },
+  computed: {
+    ...mapState(["dutch_1", "dutch_2"]),
+    ...mapActions(["fetchDutchOne", "fetchDutchTwo"]),
+    ...mapGetters(["getSeasonOne", "getSeasonTwo"])
+  },
+  created() {
+    this.$store.dispatch("fetchDutchOne");
+  },
+  methods: {}
 };
 </script>
