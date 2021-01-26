@@ -1,29 +1,16 @@
 // ABSTRACTS
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
+@import "abstracts/variables";
 
 // BASE
-@import 'base/animations';
-@import 'base/typography';
-@import 'base/typography';
-
-// COMPONENTS
-@import 'components/match-card';
-@import 'components/match-details-card';
-@import 'components/team-card';
-@import 'components/team-details-card';
+@import "base/base";
 
 // LAYOUT
-@import 'layout/app-container';
-@import 'layout/navigation';
-@import 'layout/footer';
+@import "layout/app";
+@import "layout/header";
+@import "layout/navigation";
+
+//COMPONENTS 
+@import "components/match";
 
 // PAGES
-@import 'pages/home';
-@import 'pages/match-details';
-
-// THEMES
-@import 'themes/theme';
-
-// VENDORS
-@import 'vendors/font-awesome';
+@import "pages/football";

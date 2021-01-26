@@ -1,0 +1,21 @@
+.app-container {
+    max-width: 120rem;
+    margin: 20rem auto;
+    background-color: var(--color-grey-light-1);
+    box-shadow: var(--shadow-dark);
+
+    min-height: 90rem;
+
+    @media only screen and (max-width: $bp-largest) {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
