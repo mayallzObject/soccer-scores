@@ -1,0 +1,67 @@
+.matches-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+    grid-gap: 0.5rem;
+
+}
+
+.match-header {
+    display: grid;
+    background-color: var(--color-grey-dark-1);
+    padding: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 0.5rem;
+    border-bottom: var(--line);
+
+
+   
+    &__date{
+        font-size: 1.5rem;
+        color: var(--color-grey-light-1);
+        display: flex;
+        justify-content: space-around;
+    }
+    
+}
+
+.match {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-row-gap: 1rem;
+    padding: 3rem 1rem;
+    border-bottom: var(--line);
+    
+    &__status {
+        font-size: 1.6rem;
+        color: var(--color-grey-light-1);
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    
+    &__team-home {
+        font-size: 1.6rem;
+        color: var(--color-grey-light-1);
+        display: flex;
+        justify-content: flex-end;
+        
+    }
+     
+    &__score {
+        font-size: 1.6rem;
+        color: var(--color-grey-light-1);
+        display: flex;
+        justify-content: center;
+        
+
+    }
+
+    &__team-away {
+        font-size: 1.5rem;
+        color: var(--color-grey-light-1);
+        display: flex;
+        justify-content: flex-start;
+
+
+    }
+}

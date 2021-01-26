@@ -3,15 +3,14 @@
 
 // BASE
 @import "base/base";
-@import "base/topography";
 
 // LAYOUT
 @import "layout/app";
-
+@import "layout/header";
+@import "layout/navigation";
 
 //COMPONENTS 
-@import "components/left-sidebar";
-
+@import "components/match";
 
 // PAGES
-@import "pages/home-view";
+@import "pages/football";
