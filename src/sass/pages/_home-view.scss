@@ -1,0 +1,12 @@
+.home-view {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-primary);
+  
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+    }
+
+}
+
+
