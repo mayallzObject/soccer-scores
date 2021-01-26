@@ -46,6 +46,8 @@
         transform: scaleY(1);
         width: 100%;
         border-bottom: var(--line-active);
+        background-color: var(--color-grey-dark-2);
+
       
     }
 
@@ -77,19 +79,6 @@
         }
     }
 
-    &__icon {
-        width: 1.75rem;
-        height: 1.75rem;
-        margin-right: 2rem;
-        fill: currentColor;
-
-        @media only screen and (max-width: $bp-small) {
-            margin-right: 0;
-            margin-bottom: .7rem;
-            width: 1.5rem;
-            height: 1.5rem;
-        }
-    }
 }
 
 

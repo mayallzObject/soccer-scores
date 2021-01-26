@@ -30,6 +30,33 @@ const routes = [
     name: "TeamDetails",
     component: lazyLoad("TeamDetails"),
     props: true
+  },
+  {
+    path: "/venues",
+    name: "Venues",
+    component: lazyLoad("Venues"),
+    props: true
+  },
+  {
+    path: "/venues/:id",
+    name: "VenueDetails",
+    component: lazyLoad("VenueDetails"),
+    props: true
+  },
+  {
+    path: "/markets",
+    name: "Markets",
+    component: lazyLoad("Markets")
+  },
+  {
+    path: "/markets/:id",
+    name: "MarketDetails",
+    component: lazyLoad("MarketDetails")
+  },
+  {
+    path: "/about",
+    name: "About",
+    component: lazyLoad("About")
   }
 ];
 
