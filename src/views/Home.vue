@@ -1,21 +1,18 @@
 <template>
   <div>
-    <header class="header-container">
-      <div class="header-container__header">
-        Football
-      </div>
-    </header>
+    <header class="header-container"></header>
     <div class="football">
       <div class="left-sidebar">
         <div class="league-nav">
           <div class="league-nav__item">
-            <div class="league-nav__link" @click="getSeasonId">
-              1. Eredivisie
-            </div>
+            <a class="league-nav__link" @click="getSeasonIdDevision">
+              Eerste Divisie
+            </a>
           </div>
+
           <div class="league-nav__item">
             <a class="league-nav__link" @click="getSeasonIdDevision">
-              2. Eerste Divisie
+              Eerste Divisie
             </a>
           </div>
         </div>

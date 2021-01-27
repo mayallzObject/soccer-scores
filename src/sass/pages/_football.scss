@@ -5,6 +5,7 @@
   
     @media only screen and (max-width: $bp-medium) {
         flex-direction: column;
+        
     }
 
 }   
@@ -16,6 +17,11 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        text-align: center;
+    }
     
 }
 
@@ -34,56 +40,53 @@
     
         position: relative;
         font-size: 1.6rem;
-        color: var(--color-primary);
+        
+        color: var(--color-grey-light-3);
         line-height: 3.5rem;
         &:not(:last-child) {
-            margin-bottom: .5rem;
-
+            margin-bottom: 1.5rem;
+            
             @media only screen and (max-width: $bp-medium) {
                 margin: 0;
             }
         }
-
+        
         @media only screen and (max-width: $bp-medium) {
             flex: 1;
             justify-self: space-around;
         }
     }
-
+    
     &__item::before {
         content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 3px;
-        background-color: rgba(255, 255, 255, 0.3);
-        transform: scaleY(0);
-        transition: transform .2s,
-        width .4s cubic-bezier(1,0,0,1) .2s,
-        background-color .1s;
-    }
-    
-    &__item:hover::before,
-    &__item--active::before {
-        transform: scaleY(1);
-        width: 100%;
+        
         
     }
     
+    &__item:hover{
+        color: var(--color-primary)
+    }
+
+    &__item:hover::before,
     &__item:active::before {
-        background-color: var(--color-grey-dark-2);
+        border-left: var(--line-active);
+        padding-left:1rem;
+        
+        
+        
+        
         
         
     }
     
     &__link:link,
     &__link:visited {
+
         color: var(--color-grey-light-1);
         text-decoration: none;
         text-transform: uppercase;
         display: block;
-        padding: 1.5rem 3rem;
+        padding: 1rem 3rem;
         position: relative;
         z-index: 10;
         
@@ -92,7 +95,7 @@
         
         @media only screen and (max-width: $bp-medium) {
             justify-content: center;
-            
+            padding: 2rem;
         }
         
         @media only screen and (max-width: $bp-small) {
@@ -101,19 +104,20 @@
         }
     }
     
-    &__icon {
-        width: 1.75rem;
-        height: 1.75rem;
+    
+    // &__icon {
+        //     width: 1.75rem;
+        //     height: 1.75rem;
         
-        fill: currentColor;
+        //     fill: currentColor;
         
-        @media only screen and (max-width: $bp-small) {
-            margin-right: 0;
-            margin-bottom: .7rem;
-            width: 1.5rem;
-            height: 1.5rem;
-        }
-    }
+        //     @media only screen and (max-width: $bp-small) {
+            //         margin-right: 0;
+    //         margin-bottom: .7rem;
+    //         width: 1.5rem;
+    //         height: 1.5rem;
+    //     }
+    // }
 }
     
 .main-content {
@@ -124,36 +128,58 @@
     display: flex;
     flex-direction: column;
       
-    @media only screen and (max-width: $bp-medium) {
-        min-width: 100%;
-    }
-
+    
     &__filter {
         display: flex;  
-        justify-content: space-around;
-        border-bottom: var(--line);
+        justify-content: space-between;
         background-color: var(--color-grey-dark-1);
-        
-        &--active {
+        width: 100%;
         border-bottom: var(--line-active);
       
+        &--active {
+            border-bottom: var(--line-active);
+            
         }
-
+        
     }
     
     &__button {
         display: flex;
-        border: none;
-        width: 100%;
-        padding: 2rem 0;
-        
+        padding: 1rem 0;
         color: var(--color-grey-light-1);
-        
+        border: var(--line);
+        margin: 1rem;
+        width: 30%;
         background-color: var(--color-grey-dark-1);
         justify-content: center;
+        border-radius: var(--radius-large);
+    }
+
+    &__button:hover::before,
+    &__button--active::before {
+        border: var(--line-active);
+        
+        
+        // background-color: var(--color-grey-dark-2);
+        
+        
     }
     
+
+    &__button:focus {
+        border: var(--line-active);
+        outline: none;
+
+        
+    }
+    
+    @media only screen and (max-width: $bp-medium) {
+        min-width: 100%;
+       
+    }
+
 }
+
     
 
 

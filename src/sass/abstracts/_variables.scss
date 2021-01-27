@@ -1,7 +1,7 @@
 :root {
     // COLORS
     // PRIMARY
-    --color-primary: #9acd32;
+    --color-primary: orange;
     --color-primary-light: #6182e6;
     --color-primary-dark:  #4169e1;
 
@@ -33,9 +33,9 @@
 
     // BORDER
     --line: 0.2rem solid var(--color-grey-dark-2);
-    --line-active:  0.4rem solid  var(--color-primary);
+    --line-active:  0.2rem solid  var(--color-primary);
     --radius-small: 0.3rem;
-    --radius-large: 0.5rem;
+    --radius-large: 1rem;
 }
 
 $bp-largest: 75em;     // 1200px

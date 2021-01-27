@@ -14,37 +14,37 @@
     <div class="navigation-container__item">
       <router-link
         :to="{
-          name: 'Home'
+          name: 'Teams'
         }"
         class="navigation-container__link"
       >
-        Tennis
+        Teams
       </router-link>
     </div>
     <div class="navigation-container__item">
       <router-link
         :to="{
-          name: 'Home'
+          name: 'Venues'
         }"
         class="navigation-container__link"
       >
-        Basketball
+        Venues
       </router-link>
     </div>
     <div class="navigation-container__item">
       <router-link
         :to="{
-          name: 'Home'
+          name: 'Markets'
         }"
         class="navigation-container__link"
       >
-        Contact
+        Markets
       </router-link>
     </div>
     <div class="navigation-container__item">
       <router-link
         :to="{
-          name: 'Home'
+          name: 'About'
         }"
         class="navigation-container__link"
       >

@@ -39,9 +39,9 @@ export default new Vuex.Store({
           console.log("There was an error:", error.response);
         });
     },
-    fetchStandings({ commit }, id) {
+    fetchStandings({ commit }, season) {
       matchPlayApi
-        .getStandings(id)
+        .getStandings(season)
         .then(response => {
           commit("SET_STANDINGS", response.data.data.standings),
             console.log(response.data);
