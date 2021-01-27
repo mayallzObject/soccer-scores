@@ -85,7 +85,6 @@ export default {
       id: "",
       from: "",
       to: "",
-      season: this.id,
       period_1: this.getPeriod(this.period_1),
       period_2: this.getPeriod(this.period_2),
       period_3: this.getPeriod(this.period_3),
@@ -97,13 +96,8 @@ export default {
   },
 
   computed: {
-    ...mapState(["matches", "dutch_1", "dutch_2", "standings"]),
-    ...mapActions([
-      "fetchMatches",
-      "fetchDutchOne",
-      "fetchDutchTwo",
-      "fetchStandings"
-    ]),
+    ...mapState(["matches", "dutch_1", "dutch_2"]),
+    ...mapActions(["fetchMatches", "fetchDutchOne", "fetchDutchTwo"]),
     ...mapGetters(["getSeasonOne", "getSeasonTwo"])
   },
   created() {

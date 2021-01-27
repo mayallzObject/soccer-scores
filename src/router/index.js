@@ -15,7 +15,7 @@ const routes = [
     component: Home
   },
   {
-    path: "/:id",
+    path: "/match/:match_id",
     name: "MatchDetails",
     component: lazyLoad("MatchDetails"),
     props: true

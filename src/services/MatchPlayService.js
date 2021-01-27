@@ -23,9 +23,10 @@ export default {
   getDutchTwo() {
     return matchPlayApi.get(`/seasons?apikey=${API_KEY}&league_id=450`);
   },
-  getStandings(season) {
-    return matchPlayApi.get(
-      `/standings?apikey=${API_KEY}&season_id=${season} `
-    );
+  // getStandings(id) {
+  //   return matchPlayApi.get(`/standings?apikey=${API_KEY}&season_id=${id} `);
+  // },
+  getMacth(matchId) {
+    return matchPlayApi.get(`/matches/${matchId}?apikey=${API_KEY} `);
   }
 };
