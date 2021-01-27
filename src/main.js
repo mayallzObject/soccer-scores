@@ -4,6 +4,7 @@ import router from "./router";
 import store from "./store";
 import upperFirst from "lodash/upperFirst";
 import camelCase from "lodash/camelCase";
+
 import "@/sass/main.scss";
 
 Vue.config.productionTip = false;
@@ -27,5 +28,6 @@ requireComponent.keys().forEach(fileName => {
 new Vue({
   router,
   store,
+
   render: h => h(App)
 }).$mount("#app");

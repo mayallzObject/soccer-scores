@@ -8,7 +8,6 @@
               Eerste Divisie
             </a>
           </div>
-
           <div class="league-nav__item">
             <a class="league-nav__link" @click="getSeasonIdDevision">
               Eerste Divisie
