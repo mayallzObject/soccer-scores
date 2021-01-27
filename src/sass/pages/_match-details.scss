@@ -1,0 +1,96 @@
+.details-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 0.5rem;
+
+}
+.details-header {
+    display: grid;
+    background-color: var(--color-grey-dark-1);
+    height: 12rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 0.5rem;
+    border-bottom: var(--line);
+
+
+   
+    &__stadium{
+        font-size: 1.5rem;
+        color: var(--color-grey-light-1);
+        display: flex;
+      
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    &__city{
+        font-size: 1.5rem;
+        color: var(--color-grey-light-1);
+        display: flex;
+   
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__round{
+        font-size: 1.5rem;
+        color: var(--color-grey-light-1);
+        display: flex;
+       
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    &__league{
+        font-size: 1.5rem;
+        color: var(--color-grey-light-1);
+        display: flex;
+        
+        justify-content: space-around;
+
+        align-items: center;
+    }
+    
+}
+
+// .match-details {
+//     display: grid;
+//     grid-template-columns: repeat(5, 1fr);
+//     grid-row-gap: 1rem;
+//     padding: 3rem 1rem;
+//     border-bottom: var(--line);
+    
+//     &__status {
+//         font-size: 1.6rem;
+//         color: var(--color-grey-light-1);
+//         display: flex;
+//         justify-content: flex-start;
+//     }
+    
+    
+//     &__team-home {
+//         font-size: 1.6rem;
+//         color: var(--color-grey-light-1);
+//         display: flex;
+//         justify-content: flex-end;
+        
+//     }
+     
+//     &__score {
+//         font-size: 1.6rem;
+//         color: var(--color-grey-light-1);
+//         display: flex;
+//         justify-content: center;
+        
+
+//     }
+
+//     &__team-away {
+//         font-size: 1.5rem;
+//         color: var(--color-grey-light-1);
+//         display: flex;
+//         justify-content: flex-start;
+
+
+//     }
+// }

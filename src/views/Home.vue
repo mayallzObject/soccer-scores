@@ -1,6 +1,5 @@
 <template>
   <div>
-    <header class="header-container"></header>
     <div class="football">
       <div class="left-sidebar">
         <div class="league-nav">
