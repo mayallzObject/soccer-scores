@@ -1,7 +1,7 @@
 <template>
   <div class="matches-container">
     <router-link
-      class="meal-card__link"
+      class="match-link"
       :to="{
         name: 'MatchDetails',
         params: { matchId: match.match_id }

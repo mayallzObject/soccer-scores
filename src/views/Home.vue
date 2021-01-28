@@ -4,14 +4,14 @@
       <div class="left-sidebar">
         <div class="league-nav">
           <div class="league-nav__item">
-            <a class="league-nav__link" @click="getSeasonIdDevision">
+            <button class="league-nav__link" @click="getSeasonId">
               Eerste Divisie
-            </a>
+            </button>
           </div>
           <div class="league-nav__item">
-            <a class="league-nav__link" @click="getSeasonIdDevision">
+            <button class="league-nav__link" @click="getSeasonIdDevision">
               Eerste Divisie
-            </a>
+            </button>
           </div>
         </div>
       </div>

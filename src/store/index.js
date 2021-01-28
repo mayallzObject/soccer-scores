@@ -1,10 +1,20 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import matchPlayApi from "../services/MatchPlayService.js";
+import createPersistedState from "vuex-persistedstate";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
+  plugins: [
+    createPersistedState({
+      matches: [],
+      dutch_1: [],
+      dutch_2: [],
+
+      matchID: {}
+    })
+  ],
   state: {
     matches: [],
     dutch_1: [],
@@ -88,7 +98,7 @@ export default new Vuex.Store({
       return state.matchID.match_statistics[0];
     },
     getAwayTeamStats: state => {
-      return state.matchID.match_statistics[0];
+      return state.matchID.match_statistics[1];
     },
     getVenue: state => {
       return state.matchID.venue;
