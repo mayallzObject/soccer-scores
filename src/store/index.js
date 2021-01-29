@@ -1,15 +1,18 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import matchPlayApi from "../services/MatchPlayService.js";
+import createPersistedState from "vuex-persistedstate";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
+  plugins: [createPersistedState({})],
   state: {
     matches: [],
     dutch_1: [],
     dutch_2: [],
-    standings: []
+
+    matchID: {}
   },
   mutations: {
     SET_MATCHES(state, matches) {
@@ -21,8 +24,8 @@ export default new Vuex.Store({
     SET_DUTCH_2(state, dutch_2) {
       state.dutch_2 = dutch_2;
     },
-    SET_STANDINGS(state, standings) {
-      state.standings = standings;
+    SET_MATCH_ID(state, matchID) {
+      state.matchID = matchID;
     }
   },
 
@@ -33,18 +36,17 @@ export default new Vuex.Store({
         .getMatches({ id, from, to })
         .then(response => {
           commit("SET_MATCHES", response.data.data);
-          console.log(response.data.data);
         })
         .catch(error => {
           console.log("There was an error:", error.response);
         });
     },
-    fetchStandings({ commit }, season) {
+    fetchMatch({ commit }, matchId) {
       matchPlayApi
-        .getStandings(season)
+        .getMacth(matchId)
         .then(response => {
-          commit("SET_STANDINGS", response.data.data.standings),
-            console.log(response.data);
+          commit("SET_MATCH_ID", response.data.data),
+            console.log(response.data.data);
         })
         .catch(error => {
           console.log("There was an error:", error.response);
@@ -77,6 +79,24 @@ export default new Vuex.Store({
     },
     getSeasonTwo: state => {
       return state.dutch_2.slice(0, 1).map(two => two.season_id);
+    },
+    getHomeTeam: state => {
+      return state.matchID.home_team.name;
+    },
+    getAwayTeam: state => {
+      return state.matchID.away_team.name;
+    },
+    getHomeTeamStats: state => {
+      return state.matchID.match_statistics[0];
+    },
+    getAwayTeamStats: state => {
+      return state.matchID.match_statistics[1];
+    },
+    getVenue: state => {
+      return state.matchID.venue;
+    },
+    getMatchEvents: state => {
+      return state.matchID.match_events;
     }
   },
   modules: {}

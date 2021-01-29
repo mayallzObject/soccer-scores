@@ -1,19 +1,17 @@
 <template>
   <div>
-    <header class="header-container"></header>
     <div class="football">
       <div class="left-sidebar">
         <div class="league-nav">
           <div class="league-nav__item">
-            <a class="league-nav__link" @click="getSeasonIdDevision">
+            <button class="league-nav__link" @click="getSeasonId">
               Eerste Divisie
-            </a>
+            </button>
           </div>
-
           <div class="league-nav__item">
-            <a class="league-nav__link" @click="getSeasonIdDevision">
+            <button class="league-nav__link" @click="getSeasonIdDevision">
               Eerste Divisie
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -85,7 +83,6 @@ export default {
       id: "",
       from: "",
       to: "",
-      season: this.id,
       period_1: this.getPeriod(this.period_1),
       period_2: this.getPeriod(this.period_2),
       period_3: this.getPeriod(this.period_3),
@@ -97,13 +94,8 @@ export default {
   },
 
   computed: {
-    ...mapState(["matches", "dutch_1", "dutch_2", "standings"]),
-    ...mapActions([
-      "fetchMatches",
-      "fetchDutchOne",
-      "fetchDutchTwo",
-      "fetchStandings"
-    ]),
+    ...mapState(["matches", "dutch_1", "dutch_2"]),
+    ...mapActions(["fetchMatches", "fetchDutchOne", "fetchDutchTwo"]),
     ...mapGetters(["getSeasonOne", "getSeasonTwo"])
   },
   created() {
