@@ -6,15 +6,7 @@ import createPersistedState from "vuex-persistedstate";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  plugins: [
-    createPersistedState({
-      matches: [],
-      dutch_1: [],
-      dutch_2: [],
-
-      matchID: {}
-    })
-  ],
+  plugins: [createPersistedState({})],
   state: {
     matches: [],
     dutch_1: [],
@@ -102,6 +94,9 @@ export default new Vuex.Store({
     },
     getVenue: state => {
       return state.matchID.venue;
+    },
+    getMatchEvents: state => {
+      return state.matchID.match_events;
     }
   },
   modules: {}
