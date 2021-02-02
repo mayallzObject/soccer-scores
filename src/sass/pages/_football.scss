@@ -12,7 +12,11 @@
 .left-sidebar {
     background-color: var(--color-grey-dark-1);
     padding: 2rem 0 2rem 0.5rem;
-    
+    border-left: var(--line-active);
+    border-top: var(--line-active);
+   
+
+
     flex: 0 0 13%;
     height: 100vh;
     display: flex;
@@ -23,6 +27,19 @@
         text-align: center;
     }
     
+}
+
+.league-header{
+    display: flex;  
+    height: 3rem;
+    color: var(--color-primary);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    justify-content: space-around;
+    background-color: var(--color-grey-dark-1);
+    border-top: var(--line-active);
+    text-align: center;
+    border-left: var(--line-active);
 }
 
 .league-nav {
@@ -37,12 +54,13 @@
     }
     
     &__item {
-    
         position: relative;
         font-size: 1.6rem;
-        
+        border-bottom: var(--line);
         color: var(--color-grey-light-3);
         line-height: 3.5rem;
+      
+      
         &:not(:last-child) {
             margin-bottom: 1.5rem;
             
@@ -59,26 +77,24 @@
     
     &__item::before {
         content: "";
-        
-        
     }
-    
+
+
     &__item:hover{
         color: var(--color-primary)
     }
-
+    
     &__item:hover::before,
     &__item:active::before {
         border-left: var(--line-active);
         padding-left:1rem;
-        
-        
-        
-        
-        
-        
+        outline: none;
     }
     
+    &__link {
+        outline: none;
+    }
+
     &__link:link,
     &__link:visited {
 
@@ -103,39 +119,26 @@
             padding: 1.5rem .5rem;
         }
     }
-    
-    
-    // &__icon {
-        //     width: 1.75rem;
-        //     height: 1.75rem;
-        
-        //     fill: currentColor;
-        
-        //     @media only screen and (max-width: $bp-small) {
-            //         margin-right: 0;
-    //         margin-bottom: .7rem;
-    //         width: 1.5rem;
-    //         height: 1.5rem;
-    //     }
-    // }
 }
     
 .main-content {
     background-color: var(--color-grey-dark-1);
     text-align: center;
-    flex: 0 0 56.2%;
-    max-width: 56.2%;
+    flex: 0 0 56.9%;
+    max-width: 56.9%;
     display: flex;
     flex-direction: column;
-      
+    border-top: var(--line-active);
+
     
     &__filter {
         display: flex;  
+        margin-top: 1rem;
         justify-content: space-between;
         background-color: var(--color-grey-dark-1);
         width: 100%;
-        border-bottom: var(--line-active);
-      
+        border-bottom: var(--line);
+        
         &--active {
             border-bottom: var(--line-active);
             
@@ -145,37 +148,45 @@
     
     &__button {
         display: flex;
-        padding: 1rem 0;
+        padding: 1.2rem 0;
         color: var(--color-grey-light-1);
-        border: var(--line);
+        border: 2px solid transparent;
         margin: 1rem;
+        font-size: 1.3rem;
+        font-weight: 400;
         width: 30%;
         background-color: var(--color-grey-dark-1);
         justify-content: center;
-        border-radius: var(--radius-large);
+        
+        &--live{
+            color: var(--color-primary);
+            border: var(--line);
+            border-radius: var(--small)
+            
+        }
     }
 
     &__button:hover::before,
     &__button--active::before {
-        border: var(--line-active);
-        
-        
+        border-bottom: var(--line-active);
+        border-right: var(--line-active);
         // background-color: var(--color-grey-dark-2);
-        
-        
     }
     
 
     &__button:focus {
-        border: var(--line-active);
+        border-bottom: var(--line-active);
         outline: none;
-
-        
     }
+
+    &__button:after {
+        border-bottom: var(--line-active);
+       
+    }
+    
     
     @media only screen and (max-width: $bp-medium) {
         min-width: 100%;
-       
     }
 
 }
@@ -185,12 +196,18 @@
 
 .right-sidebar {
     background-color: var(--color-grey-dark-1);
-
     flex: 0 0 29.7%;
+    padding: 2rem 2rem;
+    
+    border-right: var(--line-active);
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    border-top: var(--line-active);
+ 
+
+    @media only screen and (max-width: $bp-medium) {
+    
+        
+    }
 }
 
 

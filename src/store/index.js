@@ -11,7 +11,7 @@ export default new Vuex.Store({
     matches: [],
     dutch_1: [],
     dutch_2: [],
-
+    standings: [],
     matchID: {}
   },
   mutations: {
@@ -23,6 +23,9 @@ export default new Vuex.Store({
     },
     SET_DUTCH_2(state, dutch_2) {
       state.dutch_2 = dutch_2;
+    },
+    SET_STANDINGS(state, standings) {
+      state.standings = standings;
     },
     SET_MATCH_ID(state, matchID) {
       state.matchID = matchID;
@@ -52,6 +55,17 @@ export default new Vuex.Store({
           console.log("There was an error:", error.response);
         });
     },
+    fetchStangins({ commit }) {
+      matchPlayApi
+        .getStandings()
+        .then(response => {
+          commit("SET_STANDINGS", response.data.data.standings);
+        })
+        .catch(error => {
+          console.log("There was an error:", error.response);
+        });
+    },
+
     fetchDutchOne({ commit }) {
       matchPlayApi
         .getDutchOne()
@@ -97,6 +111,12 @@ export default new Vuex.Store({
     },
     getMatchEvents: state => {
       return state.matchID.match_events;
+    },
+    getHomeLineup: state => {
+      return state.matchID.lineups[0];
+    },
+    getAwayLineup: state => {
+      return state.matchID.lineups[1];
     }
   },
   modules: {}

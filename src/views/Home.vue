@@ -5,7 +5,7 @@
         <div class="league-nav">
           <div class="league-nav__item">
             <button class="league-nav__link" @click="getSeasonId">
-              Eerste Divisie
+              Eredivisie
             </button>
           </div>
           <div class="league-nav__item">
@@ -18,6 +18,9 @@
       <div class="main-content">
         <div class="main-content__filter" :class="filterHighlighter()">
           <!-- <button @click="getDateAll" class="football__button">All</button> -->
+          <button class="main-content__button main-content__button--live">
+            LIVE
+          </button>
           <button class="main-content__button" @click="getDateOne">
             {{ period_1 }}
           </button>
@@ -59,9 +62,13 @@
           <h2>Loading...</h2>
         </div>
       </div>
-
       <div class="right-sidebar">
-        Right Sidebar
+        <div class="standings-header">Leaderboard</div>
+        <StandingsTable
+          v-for="team in standings"
+          :key="team.team_id"
+          :team="team"
+        />
       </div>
     </div>
   </div>
@@ -70,12 +77,15 @@
 <script>
 import { mapActions, mapState, mapGetters } from "vuex";
 import MatchCard from "@/components/MatchCard";
+import StandingsTable from "@/components/StandingsTable";
+
 import moment from "moment";
 
 export default {
   name: "Football",
   components: {
-    MatchCard
+    MatchCard,
+    StandingsTable
   },
 
   data() {
@@ -94,14 +104,21 @@ export default {
   },
 
   computed: {
-    ...mapState(["matches", "dutch_1", "dutch_2"]),
-    ...mapActions(["fetchMatches", "fetchDutchOne", "fetchDutchTwo"]),
+    ...mapState(["matches", "dutch_1", "dutch_2", "standings"]),
+    ...mapActions([
+      "fetchMatches",
+      "fetchDutchOne",
+      "fetchDutchTwo",
+      "fetchStangins"
+    ]),
     ...mapGetters(["getSeasonOne", "getSeasonTwo"])
   },
   created() {
     this.$store.dispatch("fetchDutchOne");
     this.$store.dispatch("fetchDutchTwo");
-    setInterval(this.getPeriod, 100);
+    this.$store.dispatch("fetchStangins");
+
+    setInterval(this.getPeriod, 1);
   },
   methods: {
     filterHighlighter() {

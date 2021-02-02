@@ -1,12 +1,11 @@
 .header-container {
     display: flex;
-    height: 13rem; 
-    background-image: 
+    height: 15rem; 
+    background-image: linear-gradient( rgba(143, 198, 99, 0.1), rgba(147, 198, 99, 0.1)),
     url(../assets/banner.jpg);
     background-size: cover;
     background-position: top;
     position: relative;
-    border-top: var(--line-active);
-    border-bottom: var(--line);
-
+    border-left: var(--line);
+    border-right: var(--line);
 }
