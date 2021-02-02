@@ -1,6 +1,7 @@
 # Soccer-Scores
 
 
+![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/66206483/106613575-a559da00-656a-11eb-8ef6-545cebfda602.gif)
 
 ## Table of content
 - [General info](#General-info)
